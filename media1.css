@@ -1,0 +1,615 @@
+
+@media (min-width:10px) and (max-width:600px){
+    section{
+        overflow: hidden;
+    }
+    .navbar{
+        padding: 10px 20px;
+    }
+    .navbar nav{
+        position: absolute;
+        width: 100%;
+        top: 66px;
+        left: 0;
+        background-color: #1b1b1bc2;
+        display: none;
+    }
+    .navbar.active nav{
+        display: initial;
+    }
+    .navbar ul{
+        left: 0;
+    }
+    .navbar nav ul li{
+        width: 100%;
+    }
+    .navbar nav ul li ul{
+        position: relative;
+        width: 100%;
+        background-color: #1b1b1b5e;
+        left: 0;
+    }
+    .navbar nav ul li ul li ul{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .navbar nav ul li ul li ul li ul{
+        position: relative;
+        top: 0;
+        left: -5px;
+        visibility: hidden;
+       
+    }
+    .navbar nav ul li ul li ul li:hover > ul{
+        visibility: visible;
+    }
+    .navbar nav ul li ul li ul li ul li{
+        position: relative;
+        width: 100%;
+
+    }
+    .menuToggle{
+        position: relative;
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menuToggle::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transform: translateY(-12px);
+        box-shadow: 0 12px #fff;
+        
+    }
+    .menuToggle::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transform: translateY(12px);
+        
+    }
+    .navbar.active .menuToggle::before{
+        transform: rotate(45deg);
+        box-shadow: 0 0 #fff;
+    }
+    .navbar.active .menuToggle::after{
+        transform: rotate(315deg);
+    }
+
+    
+    /* home-page */
+
+    .home-container{
+        /* position: absolute; */
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -2;
+    }
+    .home-container .slider{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 500%;
+        height: 120vh;
+        animation: slider 10s linear infinite;
+        background-color: rgba(0, 0, 0, 0.4);
+        
+    }
+    .image{
+        float: none;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        margin-right: 5%;
+        margin-top: 9%;
+       
+    }
+    .image-data h1{
+        font-size: 2.5rem;
+    }
+    .image-data{
+        width: 60%;
+        margin-top: -5%;
+        margin-left: 0px;
+        float: none;
+        /* text-align: center; */
+    }
+    .image-data hr{
+        margin-bottom: 20px;
+        width: 30%;
+        color: #fff;
+    }
+    .about-home h1{
+        font-size: 30px;
+        text-align: center;
+    } 
+    .clove{
+        height:80vh;
+        width: 100%;
+        margin-left: 0px;
+        padding: 15px;
+    } 
+    .clove p{
+        font-size: 1.1rem;
+        line-height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        padding: 20px;
+    }
+    .gallery{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .gallery div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: fit-content;
+        /* gap: 10px; */
+        margin-bottom: 20px;
+        margin: 0px;
+        flex-wrap: wrap;
+        padding: 10px;
+        
+       
+    }
+    /* footer */
+    footer{
+        bottom: unset;
+        padding: 0px;
+        flex-wrap: wrap;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+    .col:nth-child(2), .col:nth-child(3){
+        flex-basis: 100%;
+    }
+    .icons i{
+        margin: 10px;
+    }
+
+    /* courses */
+    .courses, .courses-col{
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    .courses-data{
+        width: 100%;
+        height: 60vh;
+        
+    }
+    .courses-img{
+        width: 100%;
+        height: fit-content;
+    }
+    .courses-col{
+        margin-top: 0px; 
+   
+   }
+
+
+   /* popup */
+    
+    .popup .popup-content{
+        position: absolute;
+        top: 650%;
+        left: 50%;
+
+    }
+
+    .popup .popup-content{
+        width: 400px;
+    }
+    input, textarea{
+        /* margin-bottom: 10px; */
+        width: 200% !important;
+    }
+    .popup1 .popup-content{
+        position: absolute;
+        top: 260%;
+        left: 50%;
+    }
+
+
+   /* information */
+
+   .info{
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    width: 400px;
+    border-radius: 10px;
+    display: none;
+    transform: scale(0);
+    height: 200px;
+    flex-wrap: wrap;
+    z-index: 2;
+    margin-bottom: 20px;
+    }
+    .info-text p{
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .informations{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        text-align: center;
+    }
+
+
+     /* contact */
+    .sub-header{
+        height: 50vh;
+        width: 100% !important;
+        overflow-y: hidden;
+     }
+     .sub-header h1{
+        overflow: hidden;
+     }
+    .row1{
+        margin: 0%;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .card{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 70%;
+        min-height: fit-content;
+    }
+    .location{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .location iframe{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        margin-left: -20px;
+        flex-wrap: wrap;
+        
+    }
+    form input{
+        margin: 0px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .contact{
+        flex-wrap: wrap;
+    }
+    .contact-left{
+        float: none;
+        width: 100%;
+    }
+    .contact-right{
+        width: 70%;
+        padding: 0;
+        margin: 0;
+        z-index: -2;
+    }
+    form{
+        /* display: flex;
+        align-items: center;
+        flex-direction: column; */
+        width: 250%;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.32);
+        z-index: -2;
+    }
+    .input-box{
+        margin: 20px;
+        width: 250px;
+       
+    }
+
+    /* about us */
+    .sub-header{
+        overflow-x: hidden !important;
+        margin: 0;
+        width: 100%;
+    }
+
+    .container{
+        width: 100%;
+        display: block;
+        padding: 10px;
+        height: fit-content;
+        overflow: hidden;
+    }
+    .contact-section{
+        flex-basis: 100%;
+      
+    }
+    .image-section{
+        width: 100%;
+        margin-top: 50px;
+
+    }
+    .container1{
+       width: 100%;
+       flex-wrap: wrap;
+    }
+    .card1{
+        min-width: 50%;
+        flex-wrap: wrap;
+    }
+    .card1 div{
+        width: 330px;
+        flex-wrap: wrap;
+       
+    }
+    .container1 div img{
+        width:100%;
+        border-radius: 30px;
+    }
+    /* excel */
+    section{
+        overflow: hidden;
+    }
+    .excel{
+        width: 100%;
+    }
+    .excel .myVideo{
+        height: 100%;
+        width: 100%;
+    }
+    .excel-container{
+        width: 100%;
+    }
+    .excel-info{
+        width: 100%;
+        flex-direction: column;
+    }
+    .excel-data{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .excel-image{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width:601px) and (max-width:1100px){
+    section{
+        overflow: hidden;
+    }
+    .navbar{
+        padding: 10px 20px;
+    }
+    .navbar nav{
+        position: absolute;
+        width: 100%;
+        top: 66px;
+        left: 0;
+        background-color: #1b1b1bc2;
+    }
+    .navbar ul{
+        position: relative;
+        left: 0px;
+    } 
+    
+    .navbar ul li a{
+        font-size: 1rem;
+        padding: 10px;
+        
+    }
+    .navbar ul li ul{
+        position: absolute;
+        left: 0px;
+        width: 150px;
+    }
+    .navbar ul li ul{
+        visibility: hidden;
+    }
+    .navbar ul li:hover > ul{
+        visibility: visible;
+    }
+
+
+    .navbar ul li ul li ul{
+        top: 0px;
+        left: 135px;
+        transition: all 0.3s;
+        visibility: hidden;
+    }
+    .navbar ul li ul li:hover > ul{
+        visibility: visible; 
+    }
+    /* home */
+    .home-container{
+        /* position: absolute; */
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -2;
+    }
+    .home-container .slider{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 500%;
+        height: 100vh;
+        animation: slider 10s linear infinite;
+        background-color: rgba(0, 0, 0, 0.4);
+        
+    }
+    
+    .image{
+        float: right;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        margin-right: -4%;
+        margin-top: -5%;
+    
+    }
+    .image-data h1{
+        font-size: 2.5rem;
+    }
+   
+    .clove{
+        height:80vh;
+        width: 100%;
+        margin-left: 0px;
+        padding: 18px;
+    }
+    .clove p{
+        font-size: 1.3rem
+    }
+    .gallery{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .gallery div{
+
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 20px;
+        margin: 0px;
+        flex-wrap: wrap;
+        padding: 10px;
+        
+       
+    }
+    .gallery-card img{
+        width: 100%;
+    }
+    /* courses */
+    .courses-col{
+        margin-top: -70px;
+   }
+    /* .courses-data div{
+        margin-top: 60px;
+    } */
+    .courses-btn{
+        margin-top:10px !important;
+        margin: 10px;
+        border: 1px solid #e310c7;
+        padding: 10px;
+        width: fit-content;
+        height: fit-content;
+    }
+    .courses-img{
+        width: 45%;
+        
+    }
+    .courses-img img{
+        width: 100%;
+        height: 59vh;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* footer */
+    footer{
+        bottom: unset;
+        padding: 0px;
+        flex-wrap: wrap;
+        position: absolute;
+    }
+    .col{
+        flex-basis: 50%;
+    }
+    .col:nth-child(2), .col:nth-child(4), .col:nth-child(3){
+        flex-basis: 50%;
+        justify-content: end;
+        gap: 20px;
+    }
+    .row1{
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .location iframe{
+        width: 100%;
+        margin: 0px;
+    }
+
+    /* contact page */
+    .contact{
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .contact-left{
+        float: none;
+        width: 100%;
+    }
+    .row1{
+        margin: 10px;
+    }
+    .card{
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+    form input{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-size: 15px;  
+        
+        }
+    /* about */
+
+    .container{
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        height: fit-content;
+        overflow: hidden;
+       flex-direction: column;
+    }
+    .container1{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .content{
+        padding-bottom: 50px;
+    }
+
+
+}
